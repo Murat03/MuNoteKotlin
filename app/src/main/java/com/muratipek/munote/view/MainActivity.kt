@@ -1,18 +1,22 @@
-package com.muratipek.munote
+package com.muratipek.munote.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import androidx.navigation.Navigation
-import com.muratipek.munote.view.NoteFeedFragment
-import com.muratipek.munote.view.NoteFeedFragmentDirections
+import com.google.firebase.auth.FirebaseAuth
+import com.muratipek.munote.R
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        auth = FirebaseAuth.getInstance()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -35,8 +39,10 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
     fun GoDetailsFragment(){
-    }
-    fun SignOut(){
 
     }
+    fun SignOut(){
+        auth.signOut()
+    }
+
 }

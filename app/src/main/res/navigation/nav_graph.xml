@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/signInFragment">
-
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.muratipek.munote.view.SignInFragment"
@@ -22,19 +21,13 @@
         <action
             android:id="@+id/action_noteFeedFragment_to_noteDetailsFragment"
             app:destination="@id/noteDetailsFragment" />
+        <argument
+            android:name="UserEmail"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/noteDetailsFragment"
         android:name="com.muratipek.munote.view.NoteDetailsFragment"
         android:label="fragment_note_details"
-        tools:layout="@layout/fragment_note_details" >
-        <action
-            android:id="@+id/action_noteDetailsFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mapsFragment"
-        android:name="com.muratipek.munote.view.MapsFragment"
-        android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_note_details" />
 </navigation>
