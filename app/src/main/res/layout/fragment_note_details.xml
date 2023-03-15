@@ -28,7 +28,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="65dp"
         android:layout_marginEnd="65dp"
-        android:layout_marginBottom="271dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/note_shape"
         android:ems="10"
         android:gravity="top|left"
@@ -36,7 +36,7 @@
         android:inputType="textMultiLine"
         android:maxLines="15"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleText" />
@@ -45,12 +45,15 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="182dp"
         android:background="@drawable/save_button_shape"
         android:onClick="save"
         android:text="Save"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="374dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

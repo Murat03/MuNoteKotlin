@@ -23,7 +23,8 @@
             app:destination="@id/noteDetailsFragment" />
         <argument
             android:name="UserEmail"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="No User" />
     </fragment>
     <fragment
         android:id="@+id/noteDetailsFragment"
