@@ -32,7 +32,7 @@ class NoteFeedFragment : Fragment(R.layout.fragment_note_feed) {
         db = Firebase.firestore
 
         viewModel = ViewModelProvider(requireActivity()).get(NoteFeedViewModel::class.java)
-        viewModel.getDataFromFirestore(db)
+        viewModel.refreshData(db)
 
         binding.recyclerViewFeed.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerViewFeed.adapter = recyclerFoodAdapter

@@ -44,10 +44,19 @@ dependencies {
     def nav_version = "2.5.3"
     def lifecycle_version = "2.6.0"
     def activity_version = "1.6.1"
+    def room_version = "2.5.0"
+    def preference_version = "1.2.0"
+
+    implementation "androidx.preference:preference-ktx:$preference_version"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
 
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
